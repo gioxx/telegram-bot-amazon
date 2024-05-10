@@ -1,4 +1,9 @@
-[![](https://img.shields.io/github/issues/lucatnt/telegram-bot-amazon.svg)](https://github.com/LucaTNT/telegram-bot-amazon/issues) [![](https://img.shields.io/github/issues-pr-raw/lucatnt/telegram-bot-amazon.svg)](https://github.com/LucaTNT/telegram-bot-amazon/pulls) [![](https://img.shields.io/docker/pulls/lucatnt/telegram-bot-amazon.svg)](https://hub.docker.com/r/lucatnt/telegram-bot-amazon) [![](https://img.shields.io/docker/cloud/build/lucatnt/telegram-bot-amazon.svg)](https://hub.docker.com/r/lucatnt/telegram-bot-amazon) [![](https://img.shields.io/docker/image-size/lucatnt/telegram-bot-amazon/latest.svg)](https://hub.docker.com/r/lucatnt/telegram-bot-amazon)
+[![](https://img.shields.io/github/issues/lucatnt/telegram-bot-amazon.svg)](https://github.com/LucaTNT/telegram-bot-amazon/issues) [![](https://img.shields.io/github/issues-pr-raw/lucatnt/telegram-bot-amazon.svg)](https://github.com/LucaTNT/telegram-bot-amazon/pulls) [![](https://img.shields.io/docker/pulls/gfsolone/telegram-bot-amazon.svg)](https://hub.docker.com/r/gfsolone/telegram-bot-amazon) [![](https://img.shields.io/docker/cloud/build/gfsolone/telegram-bot-amazon.svg)](https://hub.docker.com/r/gfsolone/telegram-bot-amazon) [![](https://img.shields.io/docker/image-size/gfsolone/telegram-bot-amazon/latest.svg)](https://hub.docker.com/r/gfsolone/telegram-bot-amazon)
+
+> [!WARNING]
+>
+> This version of the bot solves the problem of failed link transformation (and message deletion) of amzn.eu shortlinks type.
+
 
 This is a Telegram bot that, if made admin of a group, will delete any message
 containing an Amazon link and re-post it tagged with the specified affiliate tag.
