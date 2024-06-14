@@ -2,8 +2,7 @@
 
 > [!WARNING]
 >
-> This version of the bot solves the problem of failed link transformation (and message deletion) of amzn.eu shortlinks type.
-
+> This repository is now set to read-only (public archive). If you are looking for the updated version of bot go to the repository https://github.com/gioxx/telegram-bot-amazon-python. Instead, the URL of the Docker image remains unchanged (and now uses Python instead of NodeJs).
 
 This is a Telegram bot that, if made admin of a group, will delete any message
 containing an Amazon link and re-post it tagged with the specified affiliate tag.
@@ -11,6 +10,10 @@ containing an Amazon link and re-post it tagged with the specified affiliate tag
 It can be either messaged directly, or added **as an administrator** to a group or supergroup.
 
 If messaged directly, it replies with the affiliate link, while in a group it will delete any message containing an Amazon link and replace it with a new message, with a format that is customizable through the `GROUP_REPLACEMENT_MESSAGE` environment variables.
+
+> [!NOTE]
+>
+> This version of the bot was intended to solve the problem of failed link transformation (and message deletion) based on the amzn.eu shortlink, a problem that still remained because the /d/ often present in those links was not properly intercepted. The problem is now fixed in the new version of the bot, based on Python.
 
 ## Configuration
 
@@ -32,11 +35,11 @@ You can set two optional parameters through environment variables:
 - `IGNORE_USERS`: a comma-separated list of usernames (starting with the "@" character) and numeric user IDs whose messages won't be acted upon by the bot, even if they contain matching Amazon links. A valid list would be `"@Yourusername,12345678,@IgnoreMeAsWell123"`. Numeric user IDs are useful for users who do not have Telegram user names defined. You can get yours by contacting [userinfobot](https://t.me/useridinfobot).
 - `CHANNEL_NAME`: the name of a channel to relay affiliated links to. You must first add your bot as an admin for that channel. Feature added by adapting [@nsniteshsahni's commit](https://github.com/nsniteshsahni/telegram-bot-amazon/commit/b1b814083c83089f44293adbd622ac87be8f19e8)
 
-| String               | Replacement                                                                                                                |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| String               | Replacement                                                  |
+| -------------------- | ------------------------------------------------------------ |
 | `{USER}`             | The user that posted the message, as `@username` if they created a Telegram username, as `first_name last_name` otherwise. |
-| `{ORIGINAL_MESSAGE}` | The user's original message, with no replacements (so it will contain the non-affiliated Amazon link).                     |
-| `{MESSAGE}`          | The user's message, with the affiliated Amazon link the bot created.                                                       |
+| `{ORIGINAL_MESSAGE}` | The user's original message, with no replacements (so it will contain the non-affiliated Amazon link). |
+| `{MESSAGE}`          | The user's message, with the affiliated Amazon link the bot created. |
 
 ## Running the app
 
